@@ -17,7 +17,7 @@ This game only uses: 'Type Race!' in Roblox. [Game Id: 7232779505][Link: 'https:
 
 
 // I'm not the person that created this script! (Someone else did, obviously...)
---// by: @Bromininglinesses, 2022 //--
+--// by: Bromininglinesses, 2022 //--
 ]]--
 
 _G.wpmlimit = 'put number here' -- Max WPM you can hit, will start stuttering at this limit.

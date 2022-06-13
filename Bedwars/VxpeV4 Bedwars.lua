@@ -1,3 +1,6 @@
+-- loadstring(game:HttpGet('https://raw.githubusercontent.com/Zer0ids/RanxBlox/main/Bedwars/VxpeV4%20Bedwars.lua'), true)()
+
+
 repeat task.wait() until game:IsLoaded() == true
 local injected = true
 local oldrainbow = false

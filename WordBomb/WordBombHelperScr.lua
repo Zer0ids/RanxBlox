@@ -1,5 +1,4 @@
 -- Remade by: @Untyper
--- Copy this: loadstring(game:HttpGet('https://raw.githubusercontent.com/Zer0ids/RanxBlox/main/WordBomb/%5BTESTING%5D%20x114_WordBombScr.lua', true))()
 
 setfpscap(999)
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/x114/User-Interface-s/main/Splixuiedited"))()

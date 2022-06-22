@@ -1,3 +1,5 @@
+-- loadstring(game:HttpGet('https://raw.githubusercontent.com/Zer0ids/RanxBlox/main/3008/Unknown3008Scr3.lua', true))()
+
 local kickmenu
 local modmenuguihandler
 for _,v in next, getgc(true) do

@@ -1,6 +1,6 @@
 -- Remade by: @Untyper
 
-setfpscap(math.huge)
+setfpscap(999)
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/x114/User-Interface-s/main/Splixuiedited"))()
 local keys = {
 	["A"] = 0x41,
@@ -37,8 +37,9 @@ local WordList = {
     Normal = loadstring(game:HttpGet("https://gist.githubusercontent.com/raw/6f3d37a9f5068a0fc2203ac77077ce06/", true))(),
     LongWords = loadstring(game:HttpGet("https://pastebin.com/raw/UuzSb9XV", true))(),
     ExpertWords = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zer0ids/RanxBlox/main/WordBomb/WordList/Expertism.lua", true))(),
-    Hyphenated = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zer0ids/RanxBlox/main/WordBomb/WordList/Hyphenations.lua", true))()
+    -- Hyphenated = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zer0ids/RanxBlox/main/WordBomb/WordList/Hyphenations.lua", true))()
 }
+-- Hyphenated is still being worked on!
 -- functions --
 function FindLetters()
     for _,v in pairs(getgc()) do
@@ -126,7 +127,7 @@ MainSection:Button({name = "TypeAnswer",callback = function()
     end
 end})
 MainSection:Toggle({Name = "AutoType",Default = false,Pointer = "AutoTypePointer"})
-MainSection:Dropdown({Name = "WordList", Options = {"Normal","LongWords","ExpertWords","Hyphenated"},Default = "Normal",Pointer = "WordListPointer"})
+MainSection:Dropdown({Name = "WordList", Options = {"Normal","LongWords","ExpertWords"},Default = "Normal",Pointer = "WordListPointer"})
 MainSection:Slider({Name = "Type Delay", min = 0,max = 1,def = 0,decimals = 0.01,Pointer = "TypeDelayPointer"})
 MainSection:Slider({Name = "AutoType Delay",min = 0,max = 8,def = 0,decimals = 0.01,Pointer = "AutoTypeDelayPointer"})
 MainSection:Button({Name = "Clear Used Words",callback = function()

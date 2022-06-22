@@ -113,11 +113,6 @@ local MainTab = Window:Page({Name = "Main"})
 local MainSection = MainTab:Section({Name = "Game", Side = "left"})
 local ServerSection = MainTab:Section({Name = "Server", Side = "right"})
 local SettingsSection = MainTab:Section({Name = "Settings", Side = "right"})
-local MiscSection = MainTab:Section({Name = "Misc", Side = "left"})
---[[
-local Tab2 = Window:Page({Name = "Script"})
-local Credits = Tab2:Section({Name = "Credits"})
-]]--
 
 -- Main --
 MainSection:Button({name = "TypeAnswer",callback = function()
@@ -143,14 +138,6 @@ MainSection:Button({Name = "Clear Used Words",callback = function()
     usedWords = {}
 end})
 MainSection:Label({Name = "Used Words:".."0"})
--- Misc --
-MiscSection:Toggle({Name = "AutoJoin",Default = false,Pointer = "AutoJoinPointer",callback = function(v)
-    for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.GameUI.Container.GameSpace.DefaultUI.DesktopFrame:GetDescendants()) do
-        if v:IsA("ImageButton") and v.Name == "JoinButton" then
-            firesignal(v.MouseButton1Down)
-        end
-    end
-end})
 -- Server --
 ServerSection:Button({name = "Rejoin",callback = function()
     game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, game:GetService("Players").LocalPlayer)
@@ -218,6 +205,3 @@ game:GetService("Players").LocalPlayer.PlayerGui.GameUI.DescendantAdded:Connect(
         end)
     end
 end)
--- Credits --
--- Credits:Text({Text = "Remade by: @Untyper"})
--- Credits:Text({Text = "Originally made by: some word bomb scripter idk"})

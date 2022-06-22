@@ -1,3 +1,5 @@
+--// loadstring(game:HttpGet('https://raw.githubusercontent.com/Zer0ids/RanxBlox/main/3008/Unknown3008Scr.lua', true))()
+
 local UILibrary = loadstring(game:HttpGet("https://pastebin.com/raw/V1ca2q9s"))()
  
 local MainUI = UILibrary.Load("CheatX - 3008")

@@ -1,4 +1,4 @@
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Zer0ids/RanxBlox/main/WordBomb/WordBombHelperScr.lua', true))()
 
 
---// This may not work on krnl! //--
+--// This may not work on krnl or other executors that have a short-leveled .dll! //--

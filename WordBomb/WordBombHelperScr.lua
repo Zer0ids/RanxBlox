@@ -36,7 +36,8 @@ local usedWords = {}
 local WordList = {
     Normal = loadstring(game:HttpGet("https://gist.githubusercontent.com/raw/6f3d37a9f5068a0fc2203ac77077ce06/", true))(),
     LongWords = loadstring(game:HttpGet("https://pastebin.com/raw/UuzSb9XV", true))(),
-    ExpertWords = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zer0ids/RanxBlox/main/WordBomb/WordList/Expertism.lua", true))()
+    ExpertWords = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zer0ids/RanxBlox/main/WordBomb/WordList/Expertism.lua", true))(),
+    HyphenatedWords = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zer0ids/RanxBlox/main/WordBomb/WordList/Hyphenations.lua", true))()
 }
 -- functions --
 function FindLetters()
@@ -109,9 +110,14 @@ end
 -- lib --
 local Window = Library:New({Name = "WordBomb Helper [[RANXBLOX VERSION]]", Accent = Color3.fromRGB(122, 150, 255)})
 local MainTab = Window:Page({Name = "Main"})
-local MainSection = MainTab:Section({Name = "WordBomb", Side = "left"})
+local MainSection = MainTab:Section({Name = "Game", Side = "left"})
 local ServerSection = MainTab:Section({Name = "Server", Side = "right"})
 local SettingsSection = MainTab:Section({Name = "Settings", Side = "right"})
+local MiscSection = MainTab:Section({Name = "Misc", Side = "left"})
+--[[
+local Tab2 = Window:Page({Name = "Script"})
+local Credits = Tab2:Section({Name = "Credits"})
+]]--
 
 -- Main --
 MainSection:Button({name = "TypeAnswer",callback = function()
@@ -125,7 +131,7 @@ MainSection:Button({name = "TypeAnswer",callback = function()
     end
 end})
 MainSection:Toggle({Name = "AutoType",Default = false,Pointer = "AutoTypePointer"})
-MainSection:Dropdown({Name = "WordList", Options = {"Normal","LongWords","ExpertWords"},Default = "Normal",Pointer = "WordListPointer"})
+MainSection:Dropdown({Name = "WordList", Options = {"Normal","LongWords","ExpertWords","HyphenatedWords"},Default = "Normal",Pointer = "WordListPointer"})
 MainSection:Slider({Name = "Type Delay", min = 0,max = 1,def = 0,decimals = 0.01,Pointer = "TypeDelayPointer"})
 MainSection:Slider({Name = "AutoType Delay",min = 0,max = 8,def = 0,decimals = 0.01,Pointer = "AutoTypeDelayPointer"})
 MainSection:Button({Name = "Clear Used Words",callback = function()
@@ -137,7 +143,14 @@ MainSection:Button({Name = "Clear Used Words",callback = function()
     usedWords = {}
 end})
 MainSection:Label({Name = "Used Words:".."0"})
-
+-- Misc --
+MiscSection:Toggle({Name = "AutoJoin",Default = false,Pointer = "AutoJoinPointer",callback = function(v)
+    for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.GameUI.Container.GameSpace.DefaultUI.DesktopFrame:GetDescendants()) do
+        if v:IsA("ImageButton") and v.Name == "JoinButton" then
+            firesignal(v.MouseButton1Down)
+        end
+    end
+end})
 -- Server --
 ServerSection:Button({name = "Rejoin",callback = function()
     game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, game:GetService("Players").LocalPlayer)
@@ -205,3 +218,6 @@ game:GetService("Players").LocalPlayer.PlayerGui.GameUI.DescendantAdded:Connect(
         end)
     end
 end)
+-- Credits --
+-- Credits:Text({Text = "Remade by: @Untyper"})
+-- Credits:Text({Text = "Originally made by: some word bomb scripter idk"})

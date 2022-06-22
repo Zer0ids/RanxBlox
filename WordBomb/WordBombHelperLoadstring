@@ -1,1 +1,4 @@
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Zer0ids/RanxBlox/main/WordBomb/WordBombHelperScr.lua', true))()
+
+
+--// This may not work on krnl! //--

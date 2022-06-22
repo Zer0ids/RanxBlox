@@ -1,6 +1,6 @@
 -- Remade by: @Untyper
 
-setfpscap(999)
+setfpscap(math.huge)
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/x114/User-Interface-s/main/Splixuiedited"))()
 local keys = {
 	["A"] = 0x41,

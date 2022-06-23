@@ -36,8 +36,8 @@ local usedWords = {}
 local WordList = {
     Normal = loadstring(game:HttpGet("https://gist.githubusercontent.com/raw/6f3d37a9f5068a0fc2203ac77077ce06/", true))(),
     LongWords = loadstring(game:HttpGet("https://pastebin.com/raw/UuzSb9XV", true))(),
-    ExpertWords = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zer0ids/RanxBlox/main/WordBomb/WordList/Expertism.lua", true))(),
-    HyphenatedWords = loadstring(game:HttpGet("https://pastebin.com/raw/XArjbeJA", true))()
+    ExpertWords = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zer0ids/RanxBlox/main/WordBomb/WordList/ExpertishwordsL%20v2"))(),
+    HyphenatedWords = loadstring(game:HttpGet("https://pastebin.com/raw/RPifGzzV", true))()
 }
 -- Hyphenated is still being worked on!
 -- functions --

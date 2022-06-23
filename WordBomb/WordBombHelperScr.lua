@@ -109,7 +109,7 @@ function TypeAnswer()
 end
 
 -- lib --
-local Window = Library:New({Name = "WordBomb Helper [[RANXBLOX VERSION]]", Accent = Color3.fromRGB(122, 150, 255)})
+local Window = Library:New({Name = "WordBomb Helper [RANXBLOX VERSION]", Accent = Color3.fromRGB(122, 150, 255)})
 local MainTab = Window:Page({Name = "Main"})
 local MainSection = MainTab:Section({Name = "Game", Side = "left"})
 local ServerSection = MainTab:Section({Name = "Server", Side = "right"})
@@ -127,7 +127,7 @@ MainSection:Button({name = "TypeAnswer",callback = function()
     end
 end})
 MainSection:Toggle({Name = "AutoType",Default = false,Pointer = "AutoTypePointer"})
-MainSection:Dropdown({Name = "WordList", Options = {"Normal","LongWords","ExpertWords","Hyphenated"},Default = "Normal",Pointer = "WordListPointer"})
+MainSection:Dropdown({Name = "WordList", Options = {"Normal","LongWords","ExpertWords","HyphenatedWords"},Default = "Normal",Pointer = "WordListPointer"})
 MainSection:Slider({Name = "Type Delay", min = 0,max = 1,def = 0,decimals = 0.01,Pointer = "TypeDelayPointer"})
 MainSection:Slider({Name = "AutoType Delay",min = 0,max = 8,def = 0,decimals = 0.01,Pointer = "AutoTypeDelayPointer"})
 MainSection:Button({Name = "Clear Used Words",callback = function()

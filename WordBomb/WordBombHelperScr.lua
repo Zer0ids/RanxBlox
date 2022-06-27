@@ -109,7 +109,7 @@ function TypeAnswer()
 end
 
 -- lib --
-local Window = Library:New({Name = "WordBomb Helper [RANXBLOX VERSION]", Accent = Color3.fromRGB(122, 150, 255)})
+local Window = Library:New({Name = "WordBomb Helper [RANXBLOX VERSION]", Accent = Color3.fromRGB(127, 127, 127)})
 local MainTab = Window:Page({Name = "Main"})
 local MainSection = MainTab:Section({Name = "Game", Side = "left"})
 local ServerSection = MainTab:Section({Name = "Server", Side = "right"})

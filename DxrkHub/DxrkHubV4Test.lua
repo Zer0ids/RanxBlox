@@ -1,4 +1,5 @@
 --// Small changes by: @Untyper, 2022 //--
+--// loadstring(game:HttpGet('https://raw.githubusercontent.com/Zer0ids/RanxBlox/main/DxrkHub/DxrkHubV4Test.lua', true))()
 
 -- This file was generated using Luraph Obfuscator v13.4.6
 setclipboard('https://work.ink/en/l/1n8/darkhubV4Checkpoint2')

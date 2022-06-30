@@ -28,11 +28,11 @@ local UIGradient_3 = Instance.new("UIGradient")
 local TextLabel = Instance.new("TextLabel")
 local UICorner_11 = Instance.new("UICorner")
 
---Properties:
-
 ChamsUI.Name = "ChamsUI"
 ChamsUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ChamsUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ChamsUI.ResetOnSpawn = false
+ChamsUI.DisplayOrder = math.huge
 
 Dragg.Name = "Dragg"
 Dragg.Parent = ChamsUI
@@ -208,7 +208,7 @@ local function VBXWC_fake_script()
 			script.Parent.Text = 'HIDE'
 		end
 	end
-	
+
 	script.Parent.MouseButton1Click:Connect(UIshowtohide)
 end
 coroutine.wrap(VBXWC_fake_script)()
@@ -221,25 +221,26 @@ coroutine.wrap(MDLXAKY_fake_script)()
 local function NHJTSLS_fake_script() 
 	local script = Instance.new('LocalScript', Chams)
 	
+	local h = Instance.new('Highlight')
+	h.FillColor = Color3.new(0.87451, 0.87451, 0.87451)
+	h.Enabled = false
+	local h2 = h:Clone()
+	
 	local function chamsBoolleanValueChange()
 		for _, v in pairs(game:GetService('Players'):GetPlayers()) do
-			local h = Instance.new('Highlight')
-			h.FillColor = Color3.new(0.87451, 0.87451, 0.87451)
-			h.Enabled = false
-			if h.Enabled == false then
+			if h2.Enabled == false then
 				script.Parent.Text = 'Chams: (On)'
 				if v then
-					local h2 = h:Clone()
 					h2.Parent = v.Character
 					h2.Enabled = true
 				end
 			else
-				h.Enabled = false
+				h2.Enabled = false
 				script.Parent.Text = 'Chams: (Off)'
 			end
 		end
 	end
-	
+
 	script.Parent.MouseButton1Click:Connect(chamsBoolleanValueChange)
 end
 coroutine.wrap(NHJTSLS_fake_script)()
@@ -250,7 +251,7 @@ local function KRBV_fake_script()
 		script.Parent.Parent.Visible = false
 		script.Parent.Parent.Parent.KeybindInfo.Visible = true
 	end
-	
+
 	script.Parent.MouseButton1Click:Connect(onSetRemoval)
 end
 coroutine.wrap(KRBV_fake_script)()

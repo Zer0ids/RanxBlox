@@ -224,18 +224,20 @@ local function NHJTSLS_fake_script()
 	local h = Instance.new('Highlight')
 	h.FillColor = Color3.new(0.87451, 0.87451, 0.87451)
 	h.Enabled = false
+	_G.ChamsEnabled = nil
 	
 	local function chamsBoolleanValueChange()
 		for _, v in pairs(game:GetService('Players'):GetPlayers()) do
 			local h2 = h:Clone()
-			h2.Enabled = false
-			if h2.Enabled == false then
+			if _G.ChamsEnabled == nil then
+				_G.ChamsEnabled = true
 				script.Parent.Text = 'Chams: (On)'
 				if v then
 					h2.Parent = v.Character
 					h2.Enabled = true
 				end
 			else
+				_G.ChamsEnabled = nil
 				h2.Enabled = false
 				script.Parent.Text = 'Chams: (Off)'
 			end

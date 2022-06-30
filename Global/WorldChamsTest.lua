@@ -227,15 +227,14 @@ local function NHJTSLS_fake_script()
 	
 	local function chamsBoolleanValueChange()
 		for _, v in pairs(game:GetService('Players'):GetPlayers()) do
-			if h.Enabled == false then
+			local h2 = h:Clone()
+			if h2.Enabled == false then
 				script.Parent.Text = 'Chams: (On)'
 				if v then
-					local h2 = h:Clone()
 					h2.Parent = v.Character
 					h2.Enabled = true
 				end
 			else
-				h.Enabled = false
 				h2.Enabled = false
 				script.Parent.Text = 'Chams: (Off)'
 			end

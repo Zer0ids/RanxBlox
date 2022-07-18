@@ -1,6 +1,16 @@
 -- Remade by: @Untyper
+-- I finally updated this...
+--[[
 
-setfpscap(999)
+Last updated: { 7/18/2022 }
+
+// NOTICE //
+Any executors or APIs, like: Krnl, may not work well!
+Hyphenated words is stupidly not working well...
+
+]]
+
+setfpscap(999) -- for synapse x cuz.
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/x114/User-Interface-s/main/Splixuiedited"))()
 local keys = {
 	["A"] = 0x41,
@@ -36,8 +46,9 @@ local usedWords = {}
 local WordList = {
     Normal = loadstring(game:HttpGet("https://gist.githubusercontent.com/raw/6f3d37a9f5068a0fc2203ac77077ce06/", true))(),
     LongWords = loadstring(game:HttpGet("https://pastebin.com/raw/UuzSb9XV", true))(),
-    ExpertWords = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zer0ids/RanxBlox/main/WordBomb/WordList/ExpertishwordsL%20v2"))(),
+    ExpertWords = loadstring(game:HttpGet("https://pastebin.com/raw/N0dEgzcg", true))()
  -- HyphenatedWords = loadstring(game:HttpGet("https://pastebin.com/raw/RPifGzzV", true))()
+ -- ExpertWordsUnrandomized = loadstring(game:HttpGet("https://pastebin.com/raw/2g8N4b4s", true))()
 }
 -- Hyphenated is still being worked on!
 -- functions --
